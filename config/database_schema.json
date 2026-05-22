@@ -1,0 +1,68 @@
+{
+  "project": "Financial Agent Platform",
+  "version": "1.0.0",
+  "tables": [
+    {
+      "table_name": "CompanyFinancials",
+      "description": "存放公司年度與季度財務指標的結構化數據表",
+      "columns": [
+        {
+          "name": "CompanyID",
+          "type": "INT",
+          "description": "公司唯一識別碼"
+        },
+        {
+          "name": "CompanyName",
+          "type": "NVARCHAR(255)",
+          "description": "公司名稱"
+        },
+        {
+          "name": "FiscalYear",
+          "type": "INT",
+          "description": "會計年度"
+        },
+        {
+          "name": "FiscalQuarter",
+          "type": "NVARCHAR(10)",
+          "description": "會計季度 (Q1, Q2, Q3, Q4)"
+        },
+        {
+          "name": "Revenue",
+          "type": "DECIMAL(18, 2)",
+          "description": "營業收入"
+        },
+        {
+          "name": "GrossMargin",
+          "type": "DECIMAL(5, 4)",
+          "description": "毛利率 (以小數表示，例如 0.35 代表 35%)"
+        },
+        {
+          "name": "NetIncome",
+          "type": "DECIMAL(18, 2)",
+          "description": "淨利"
+        }
+      ]
+    },
+    {
+      "table_name": "MarketCompetitors",
+      "description": "描述公司與競爭對手關係的關聯表",
+      "columns": [
+        {
+          "name": "CompanyID",
+          "type": "INT",
+          "description": "公司 ID"
+        },
+        {
+          "name": "CompetitorName",
+          "type": "NVARCHAR(255)",
+          "description": "競爭對手名稱"
+        },
+        {
+          "name": "IndustrySector",
+          "type": "NVARCHAR(100)",
+          "description": "所屬產業板塊"
+        }
+      ]
+    }
+  ]
+}
